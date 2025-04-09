@@ -1,0 +1,101 @@
+{
+  "id": "d54405ce-7d36-429c-b027-6e7ee4c0ab3a",
+  "version": "2.0",
+  "name": "Ejercicios2M2",
+  "url": "https://www.google.com",
+  "tests": [{
+    "id": "f931ff37-7484-4c4e-9359-6b6d95530af7",
+    "name": "Ejercicio2",
+    "commands": [{
+      "id": "fe0f563e-bccf-4e25-8a52-2e27709dee1d",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d9f3e512-1c70-409a-84f4-66a705e9ff5a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "798x695",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "427117ba-f8ed-49ad-86d0-8e15e7ec8b7a",
+      "comment": "",
+      "command": "click",
+      "target": "id=APjFqb",
+      "targets": [
+        ["id=APjFqb", "id"],
+        ["name=q", "name"],
+        ["css=#APjFqb", "css:finder"],
+        ["xpath=//textarea[@id='APjFqb']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d5532748-e5cc-4f51-b995-5dcd67d5f61e",
+      "comment": "",
+      "command": "type",
+      "target": "id=APjFqb",
+      "targets": [
+        ["id=APjFqb", "id"],
+        ["name=q", "name"],
+        ["css=#APjFqb", "css:finder"],
+        ["xpath=//textarea[@id='APjFqb']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "https://automationexercise.com/https://automationexercise.com/"
+    }, {
+      "id": "1ce2d646-467d-4d3c-bc3d-f216c13df3cc",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7ff6227d-dd09-45ef-b6bd-9c4ccabaa90c",
+      "comment": "",
+      "command": "click",
+      "target": "id=APjFqb",
+      "targets": [
+        ["id=APjFqb", "id"],
+        ["name=q", "name"],
+        ["css=#APjFqb", "css:finder"],
+        ["xpath=//textarea[@id='APjFqb']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7c6393c9-019a-4e0d-ba2b-904ca8b37e5b",
+      "comment": "",
+      "command": "type",
+      "target": "id=APjFqb",
+      "targets": [
+        ["id=APjFqb", "id"],
+        ["name=q", "name"],
+        ["css=#APjFqb", "css:finder"],
+        ["xpath=//textarea[@id='APjFqb']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "https://automationexercise.com/"
+    }, {
+      "id": "8d0c9326-f4f4-4838-b45b-79503e11311c",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "171b4c91-8b37-4421-b3d7-57c605947e5e",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["f931ff37-7484-4c4e-9359-6b6d95530af7"]
+  }],
+  "urls": ["https://www.google.com/"],
+  "plugins": []
+}

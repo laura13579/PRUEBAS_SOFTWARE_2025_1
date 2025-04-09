@@ -1,0 +1,70 @@
+{
+  "id": "c1965887-4f5b-4398-9f16-bc051f21f30c",
+  "version": "2.0",
+  "name": "Ejercicio4",
+  "url": "https://www.google.com",
+  "tests": [{
+    "id": "8f41da8e-ef51-4d39-86b8-5afdbc4874e4",
+    "name": "Ejercicio4",
+    "commands": [{
+      "id": "a22f828d-68bc-423b-a0ac-8dd056ba4aac",
+      "comment": "",
+      "command": "open",
+      "target": "https://practicetestautomation.com/practice-test-login/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "91861db4-4da8-4126-b241-34997b5aa69c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "800x720",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2458490f-c41a-43a6-9638-3e5f5d6d3a4f",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [],
+      "value": "usuarioIncorrecto"
+    }, {
+      "id": "a5cd9a29-300f-459d-8af9-1912640180d5",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [],
+      "value": "claveIncorrecta"
+    }, {
+      "id": "b03e6a2c-3b70-425b-9b1a-33224ee954d9",
+      "comment": "",
+      "command": "click",
+      "target": "id=submit",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "10e72fbc-6117-4d0c-a275-970e1472cc24",
+      "comment": "",
+      "command": "pause",
+      "target": "2000 (milisegundos = 2 seg)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e9b986fc-5b69-443e-8307-670ab1096c7e",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.show",
+      "targets": [],
+      "value": "Your username is invalid!"
+    }]
+  }],
+  "suites": [{
+    "id": "36d0c92d-6f45-45a2-8dc6-26aa957ccfd3",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["8f41da8e-ef51-4d39-86b8-5afdbc4874e4"]
+  }],
+  "urls": ["https://www.google.com/"],
+  "plugins": []
+}

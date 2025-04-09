@@ -1,0 +1,129 @@
+{
+  "id": "9962ce09-489d-4e27-ae19-75a3ed26a82c",
+  "version": "2.0",
+  "name": "Ejercicio3",
+  "url": "https://www.google.com",
+  "tests": [{
+    "id": "c6e0d3f1-e038-4dfb-ad7c-709ca2501e18",
+    "name": "Ejercicio3",
+    "commands": [{
+      "id": "4e04f2cb-9608-4c48-b52f-9c139721a992",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.google.com",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cfac4165-1333-46c1-b222-a92a7305b775",
+      "comment": "",
+      "command": "pause",
+      "target": "2000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "766720a0-69bf-4e0d-9705-00fa2bbdd70f",
+      "comment": "",
+      "command": "type",
+      "target": "id=APjFqb",
+      "targets": [
+        ["id=APjFqb", "id"],
+        ["name=q", "name"],
+        ["css=#APjFqb", "css:finder"],
+        ["xpath=//textarea[@id='APjFqb']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "selenium dev"
+    }, {
+      "id": "ea4f6501-69c2-482c-b9eb-bda9653e1ff5",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=q",
+      "targets": [
+        ["css=#jZ2SBf b", "css:finder"],
+        ["xpath=//div[@id='jZ2SBf']/div/span/b", "xpath:idRelative"],
+        ["xpath=//b", "xpath:position"],
+        ["xpath=//b[contains(.,'enium dev')]", "xpath:innerText"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "25977d40-1988-4b92-8ec7-852507052f78",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.tF2Cxc > div > div > .yuRUbf .LC20lb",
+      "targets": [
+        ["css=.tF2Cxc > div > div > .yuRUbf .LC20lb", "css:finder"],
+        ["xpath=//div[@id='rso']/div/div/div/div/div/div/div/div/div/div[2]/div/div/span/a/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Selenium')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "dece2747-29fc-4571-af0b-952bd9c491b1",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f8df7266-d6cc-4fc5-b4e4-64ed23b349a5",
+      "comment": "",
+      "command": "click",
+      "target": "css=h3",
+      "targets": [
+        ["css=.navbar-toggler-icon", "css:finder"],
+        ["xpath=//button/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "24ba18b1-4268-40a3-8421-5ade2117ff33",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b9258580-052b-46a9-8d89-1b1dd411add0",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Selenium",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bf8bc8cf-a726-4744-a854-2b7d903b707e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Downloads",
+      "targets": [
+        ["css=.nav-item:nth-child(4) span", "css:finder"],
+        ["xpath=//div[@id='main_navbar']/ul/li[4]/a/span", "xpath:idRelative"],
+        ["xpath=//li[4]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Projects')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f4f78036-f0be-43bb-b8b3-82d327fc6ffd",
+      "comment": "",
+      "command": "pause",
+      "target": "2000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7df1159e-4436-476d-ba4d-d98902c20de0",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "0a4700a1-e304-46f1-80df-4db6dbe816f6",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["c6e0d3f1-e038-4dfb-ad7c-709ca2501e18"]
+  }],
+  "urls": ["https://www.google.com/"],
+  "plugins": []
+}
