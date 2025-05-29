@@ -1,0 +1,92 @@
+package steps;
+ 
+import org.testng.Assert;
+
+import io.cucumber.java.en.*;
+import pages.PaginaPrincipal;
+ 
+public class SauceDemoSteps {
+ 
+    PaginaPrincipal landingPage = new PaginaPrincipal();
+
+
+        //  Scenario 1: Suma de dos números enteros
+    @Given("Navego a la página de la Calculadora Básica")
+    public void iNavigateToPage() {
+    landingPage.navigateToBasicCalculator();
+     }
+    
+    @When("Ingreso {word} en el campo \"Build\"")
+    public void iWriteUsername(String opcionBuild) {
+    System.out.println(opcionBuild); 
+    landingPage.cambiarBuild(opcionBuild);
+    }
+ 
+    @And("Ingreso {word} en el campo \"Number 1\"")
+    public void iWritePassword(String number) {
+    landingPage.writeFirstNumber(number);
+    }
+
+    @And("Ingreso {word} en el campo \"Number 2\"")
+    public void iWriteSecondNumber(String number) {
+    landingPage.writeSecondNumber(number);
+    }
+
+    @And("Selecciono la operación {string}")
+    public void seleccionoOperacion(String operacion) {
+    landingPage.selectOperation(operacion);
+    }
+
+    @And("Hago clic en el botón \"Calculate\"")
+    public void clicBotonCalculate() {
+    landingPage.clickCalculateButton();
+    }
+
+    @Then("Debería ver {string} como resultado en el campo \"Answer\"")
+    public void iShouldSeeAnswer(String expectedAnswer) {
+    String actualAnswer = landingPage.getAnswer();
+    Assert.assertEquals(actualAnswer, expectedAnswer);
+    }
+
+
+
+        // Scenario 2 : Resta de dos números enteros
+    // se utilizó lo mismo de la suma
+
+
+
+
+        // Scenario 3 : Limpiar campos de entrada y resultado
+    //ya están creados hasta el paso calcular, por lo que seguimos con los otros desde campos vacios
+
+    @And("Hago clic en el botón \"Clear\"")
+    public void clicBotonClear() {
+    landingPage.clickClearButton();
+    landingPage.waitForFieldsToBeCleared();
+    }
+
+
+    @Then("El campo \"Number 1\" debería estar vacío")
+    public void campoNumber1Vacio() {
+    Assert.assertEquals(landingPage.getFirstNumber(), "");
+    }
+
+    @And("El campo \"Number 2\" debería estar vacío")
+    public void campoNumber2Vacio() {
+    Assert.assertEquals(landingPage.getSecondNumber(), "");
+    }
+
+
+        //Scenario 4 : Operación de concatenación con dos cadenas
+    //se vuelve a reutilizar lo demas de los escenarios anteriores
+
+
+   //Scenario 5 : Suma de dos números decimales con la opción "Integer Only" desmarcada
+   @And("Desmarco la casilla {string}")
+    public void desmarcarCasilla(String nombreCasilla) {
+    if (nombreCasilla.equals("Integer Only")) {
+    landingPage.uncheckIntegerOnly();
+    }
+}
+
+}
