@@ -1,0 +1,104 @@
+package pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
+public class PaginaPrincipal extends BasePage {
+
+    //localizadores
+    private String elementoBuild = "//select[@id='selectBuild']";
+    private String elementoFirstNumber = "//input[@id='number1Field']";
+    private String elementoSecondNumber = "//input[@id='number2Field']";
+    private String elementoOperation ="//select[@id='selectOperationDropdown']";
+    private String elementoCalculate = "//input[@id='calculateButton']";
+    private String elementoIntegerOnly = "//input[@id='integerSelect']";
+
+
+    public PaginaPrincipal() {
+        super(driver);
+    }
+ 
+    public void navigateToBasicCalculator() {
+        navigateTo("https://testsheepnz.github.io/BasicCalculator.html");
+ 
+    }
+
+        //  Scenario1: Suma de dos números enteros
+    public void cambiarBuild (String opcionBuilda){
+        selectFromDropdownByValue(elementoBuild, opcionBuilda);
+
+    }
+ 
+    public void writeFirstNumber(String number){
+         write(elementoFirstNumber, number);
+    }
+    
+    public void writeSecondNumber(String number){
+         write(elementoSecondNumber, number);
+    }
+
+    public void selectOperation(String operacion) {
+    selectFromDropdownByVisibleText(elementoOperation, operacion);
+    }
+
+    public void clickCalculateButton() {
+    clickElement(elementoCalculate);
+    }
+
+    private String elementoAnswer = "//input[@id='numberAnswerField']";
+    public String getAnswer() {
+    return getValue(elementoAnswer);
+    }
+
+
+
+            // Scenario 2 : Resta de dos números enteros
+    // se utilizó lo mismo de la suma
+
+
+
+
+            // Scenario 3 : Limpiar campos de entrada y resultado
+    //ya están creados hasta el paso calcular, por lo que seguimos con los otros
+
+    private String elementoClear = "//input[@id='clearButton']";
+    public void clickClearButton() {
+    clickElement(elementoClear);
+    }
+
+    public void waitForFieldsToBeCleared() {
+    // Espera hasta que el campo 1 esté vacío
+    wait.until(driver -> getValue("//input[@id='number1Field']").isEmpty());
+    wait.until(driver -> getValue("//input[@id='number2Field']").isEmpty());
+    wait.until(driver -> getValue("//input[@id='numberAnswerField']").isEmpty());
+    }
+
+    public String getFirstNumber() {
+    return getValue("//input[@id='number1Field']");
+    }
+
+    public String getSecondNumber() {
+    return getValue("//input[@id='number2Field']");
+    }
+
+
+
+
+            //Scenario 4 : Operación de concatenación con dos cadenas
+    //se vuelve a reutilizar los metodos de los escenarios anteriores
+
+
+
+
+            //Scenario 5 : Suma de dos números decimales con la opción "Integer Only" desmarcada
+    public void uncheckIntegerOnly() {
+    WebElement checkbox = driver.findElement(By.xpath(elementoIntegerOnly));
+    if (checkbox.isSelected()) {
+        checkbox.click(); // desmarca solo si está seleccionado
+    }
+}
+
+
+
+
+}
